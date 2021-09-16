@@ -144,4 +144,15 @@ With Jetson Nano motherboard, it can collect the temperature and humidity, atmos
 * SGP40 gas sensor VOC
 * 1.3-inch OLED onboard
 
+Download and install Environment_sensor_fot_jetson_nano.   Includes sensors for Python2, only Python2.   
+
+# Run python2 app
+
+```
+
+python2 sensors.py
+
+
+```
+
 
