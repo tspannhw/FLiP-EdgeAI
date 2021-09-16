@@ -134,4 +134,14 @@ CREATE TABLE default_catalog.default_database.scada2
 * https://www.waveshare.com/wiki/Environment_Sensor_for_Jetson_Nano
 
 
+With Jetson Nano motherboard, it can collect the temperature and humidity, atmospheric pressure, ambient light, VOC, infrared, ultraviolet and other sensor data of the surrounding environment.
+
+
+* Onboard TSL25911FN digital ambient light sensor infrared
+* BME280 temperature, humidity and pressure sensor
+* ICM20948 motion attitude sensor
+* Si1145 red UVt sensor ultraviolet
+* SGP40 gas sensor VOC
+* 1.3-inch OLED onboard
+
 
