@@ -96,13 +96,13 @@ bin/pulsar-admin topics delete persistent://public/default/nvidia-sensor
 ```
 CREATE TABLE default_catalog.default_database.nvidiasensor
 (
-  id STRING, uuid STRING, ir STRING,
-  end STRING, lux STRING, gputemp STRING, 
-  cputemp STRING, te STRING, systemtime STRING, hum STRING,
+  `id` STRING, uuid STRING, ir STRING,
+  `end` STRING, lux STRING, gputemp STRING, 
+  cputemp STRING, `te` STRING, systemtime STRING, hum STRING,
  memory STRING, gas STRING, pressure STRING, 
- host STRING, diskusage STRING, ipaddress STRING, macaddress STRING, 
+ `host` STRING, diskusage STRING, ipaddress STRING, macaddress STRING, 
   gputempf STRING, host_name STRING,
-    runtime STRING, cpu STRING,cputempf STRING,
+    `runtime` STRING, cpu STRING,cputempf STRING,
   publishTime TIMESTAMP(3) METADATA,
   WATERMARK FOR publishTime AS publishTime - INTERVAL '5' SECOND
 ) WITH (
