@@ -94,19 +94,20 @@ bin/pulsar-admin topics delete persistent://public/default/nvidia-sensor
 ## jetson sensor table
 
 ```
-CREATE TABLE default_catalog.default_database.scada2
+CREATE TABLE default_catalog.default_database.nvidiasensor
 (
-  uuid STRING, systemtime STRING,
-  ipaddress STRING, host STRING, host_name STRING, 
-  macaddress STRING, endtime STRING, runtime STRING, starttime STRING,
- cpu_temp STRING, diskusage STRING, id STRING, 
- temperature STRING, adjtemp STRING, adjtempf STRING, temperaturef STRING, 
-  proximity INT, gasko STRING,
+  id STRING, uuid STRING, ir STRING,
+  end STRING, lux STRING, gputemp STRING, 
+  cputemp STRING, te STRING, systemtime STRING, hum STRING,
+ memory STRING, gas STRING, pressure STRING, 
+ host STRING, diskusage STRING, ipaddress STRING, macaddress STRING, 
+  gputempf STRING, host_name STRING,
+    runtime STRING, cpu STRING,cputempf STRING,
   publishTime TIMESTAMP(3) METADATA,
   WATERMARK FOR publishTime AS publishTime - INTERVAL '5' SECOND
 ) WITH (
   'connector' = 'pulsar',
-  'topic' = 'persistent://public/default/mqtt-2',
+  'topic' = 'persistent://public/default/nvidia-sensor',
   'value.format' = 'json',
   'service-url' = 'pulsar://localhost:6650',
   'admin-url' = 'http://localhost:8080',
