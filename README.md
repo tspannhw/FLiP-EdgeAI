@@ -2,28 +2,21 @@
 
 Edge AI with Jetson Nano + Sensors
 
+# Author
 
-# 
+** Timothy Spann **
 
 
 # FLiP-SQL
 
-Streaming Analytics with Apache Pulsar and Apache Flink SQL
+Streaming Analytics with Apache Pulsar and Apache Flink SQL from data received from NVIDIA Jetson Nano with Environmental Sensor running Python and Golang apps streaming data over Pulsar
 
-
-## IoT Data Publishing into MQTT
-
-
-I installed the Eclipse Paho MQTT Pyton3 client for NVIDIA XAVIER NX, Raspberry Pi 4 and Mac PowerBook.
-
-
-```
-pip3 install paho-mqtt
-```
 
 ## Run this yourself
 
-* You could run standalone https://pulsar.apache.org/docs/en/standalone/  https://ci.apache.org/projects/flink/flink-docs-release-1.13//docs/try-flink/local_installation/
+* You could run standalone 
+* https://pulsar.apache.org/docs/en/standalone/  
+* https://ci.apache.org/projects/flink/flink-docs-release-1.13//docs/try-flink/local_installation/
 * Run on StreamNative in the Cloud easy https://streamnative.io/en/cloud/managed/
 
 
@@ -56,10 +49,9 @@ pip3 install paho-mqtt
 ## Local Pulsar Cluster REST End Points
 
 * http://localhost:8080/admin/v2/persistent/public/default
-* http://localhost:8080/admin/v2/persistent/public/default/nvidia-sensor/stats
-* http://localhost:8080/admin/v2/persistent/public/default/nvidia-sensor/internalStats
-* http://localhost:8080/admin/v2/persistent/public/default/nvidia-sensor/subscription/test-sub/position/10
-
+* http://localhost:8080/admin/v2/persistent/public/default/nvidia-sensor-partition-0/stats
+* http://localhost:8080/admin/v2/persistent/public/default/nvidia-sensor-partition-0/internalStats
+* http://localhost:8080/admin/v2/persistent/public/default/nvidia-sensor-partition-0/subscription/test-sub/position/10
 
 
 ## Create topic
@@ -135,4 +127,11 @@ CREATE TABLE default_catalog.default_database.scada2
 ./bin/start-cluster.sh
 ./bin/sql-client.sh embedded --library /Users/tspann/Documents/servers/flink-1.13.2/sqllib -e /Users/tspann/Documents/servers/flink-1.13.2/sql-client.yaml
 ```
+
+## Sensors on NVIDIA JETSON NANO 2GB
+
+* https://www.waveshare.com/environment-sensor-for-jetson-nano.htm 
+* https://www.waveshare.com/wiki/Environment_Sensor_for_Jetson_Nano
+
+
 
