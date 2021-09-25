@@ -162,4 +162,12 @@ python2 sensors.py
 bin/pulsar-client consume "persistent://public/default/mqtt-2" -s mqtt-reader
 ```
 
+## admin
+
+```
+bin/pulsar-admin topics stats-internal persistent://public/default/mqtt-2
+bin/pulsar-admin topics peek-messages --count 5 --subscription mqtt-reader persistent://public/default/mqtt-2
+bin/pulsar-admin topics subscriptions persistent://public/default/mqtt-2
+```
+
 
