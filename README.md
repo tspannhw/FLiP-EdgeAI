@@ -147,13 +147,19 @@ With Jetson Nano motherboard, it can collect the temperature and humidity, atmos
 
 Download and install Environment_sensor_fot_jetson_nano.   Includes sensors for Python2, only Python2.   
 
-# Run python2 app
+## Run python2 app
 
 ```
 
 python2 sensors.py
 
 
+```
+
+## consume
+
+```
+bin/pulsar-client consume "persistent://public/default/mqtt-2" -s mqtt-reader
 ```
 
 
