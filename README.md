@@ -170,4 +170,18 @@ bin/pulsar-admin topics peek-messages --count 5 --subscription mqtt-reader persi
 bin/pulsar-admin topics subscriptions persistent://public/default/mqtt-2
 ```
 
+## pulsar sql on prestosql/trino
+
+```
+bin/pulsar sql
+
+use pulsar."public/default";
+show tables;
+
+describe iotjetsonjson;
+
+select cputempf, gputempf, memory, top1, top1pct, systemtime, __publish_time__, __producer_name__, __key__ from iotjetsonjson;
+
+```
+
 
